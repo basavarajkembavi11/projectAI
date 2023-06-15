@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <title>basvaraj_project</title>
+    
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custome css link  -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+<!-- header section starts -->
+<header class="header">
+    
+
+<a href="#" class="logo"><img src="data:image/jpeg;base64,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" alt="" width="300px"> </a>
+
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#About us">About us</a>
+    <a href="#doctors">Doctors</a>
+    <a href="#book">Book</a>
+    <a href="#review">Review</a>
+    <a href="#contact us">contact us</a>`
+    
+</nav>
+
+<div  id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+<!-- home section starts  -->
+
+
+<section class="home" id="home">
+    <div class="image">
+        <img src="https://media.istockphoto.com/id/1410779156/vector/ent-doctor-examines-childs-ear-with-instrument-removes-sulfur-plug-n.jpg?s=612x612&w=0&k=20&c=CNBEFZ2yx5lEwW_Px7iNrEvlw-V4rN6y2jAMtjMXYnw=" alt="" >
+    </div>
+<div class="content">
+    <h3>Take your life back</h3>
+    <p>Horan & Fevold Hearing Clinic
+        An Audiologist Owned & Operated Private Practice with a Patient Centered Focus </p>
+    <a href="#" class="btn"> Contact us <span class="fas fa-hevron-right"></span></a>
+</div>
+</section>
+<!-- home section ends -->
+
+
+ <!-- icons section starts  -->
+
+<section class="icons-container">
+
+<div class="icons">
+<i class="fas fa-user-md"></i>
+<h3>140+</h3>
+<P>Doctors at work</P>
+</div>
+
+<div class="icons">
+    <i class="fas fa-users"></i>
+    <h3>1000+</h3>
+    <P>satisfied patients</P>
+    </div>
+
+<div class="icons">
+    <i class="fas fa-procedures"></i>
+    <h3>800+</h3>
+    <P>bed facility</P>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-Hospitals"></i>
+        <h3>25+</h3>
+        <P>availables Hospitals </P>
+        </div>
+
+
+</section>
+
+<!-- icon section ends  -->
+
+
+<!-- service section starts  -->
+<section class="services" id="services">
+
+    <h1 class="heading">our <span>services</span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            <h3>free checkups</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">learn more <span class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-ambulance"></i>
+            <h3>24/7 ambulance</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">learn more <span class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <h3>expert Doctors</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">learn more <span class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-pills"></i>
+            <h3>medcines</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">learn more <span class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-procedures"></i>
+            <h3>bed facility</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn">learn more <span class="fas fa-chevron-right"></span></a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-heartbeat"></i>
+            <h3>total care</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <a href="#" class="btn">learn more <span class="fas fa-chevron-right"></span></a>
+        </div>
+        <div class="box">
+            <i class="fas fa-mobile"></i>
+            <h3>24/7 support</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+            <a href="#" class="btn">learn more <span class="fas fa-chevron-right"></span></a>
+    </div>
+    <div class="box">
+        <i class="fas fa-tv"></i>
+        <h3>online services</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <a href="#" class="btn">learn more <span class="fas fa-chevron-right"></span></a>
+
+    </div>
+
+
+</section>
+
+
+<!-- service section ends  -->
+
+
+<!-- about section starts  -->
+
+<section class="About us" id="About us">
+
+    <h1 class="heading"><span>About</span> us </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="https://img.freepik.com/premium-vector/audiologist-checking-patient-girl-ears-vector-audiologist-doctor-man-examining-young-woman-hearing-hospital-cabinet-characters-health-check-treatment-flat-cartoon-illustration_87720-5384.jpg?w=2000" alt="" width="500" height="500">
+
+        </div>
+        <div class="content">
+            <h3>we take care of your healthy life</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident necessitatibus reprehenderit, error sequi omnis aut numquam consequuntur quasi a, repellendus accusantium quod cum, at voluptatum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, ab.</p>
+            <a href="#" class="btn">learn more<span class="fas fa-chevron-right"></span></a>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+<!-- about section ends  -->
+
+<!-- doctors section starts  -->
+
+<section class="doctors" id="doctors">
+
+    <h1 class="heading">our <span>Doctors</span></h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcPwJB46LAZKIpS6lAa1g9yQ7_x-ykRODrz_XSAioDkWhL950blqCYbOhdeU2A4zsl1b5TFLpa5Y&usqp=CAU&ec=48665698" alt="">
+            <h3>john deo</h3>
+            <span>expert doctor</span>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <!-- <a href="#" class="fab fa-linkedln"></a> -->
+                <a href="#" class="fab fa-youtube"></a>
+            </div>
+        </div>
+    
+
+
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUaRSSwOzCgUZOTkpk1EQ4SaydSuXlXRxMYys94Amz_Z-mpIrjlKFua1jfLCqf4afthw8xJgjVPlE&usqp=CAU&ec=48665698">
+        <h3>Mr.Kembavi </h3>
+        <span>expert doctor</span>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <!-- <a href="#" class="fab fa-linkedln"></a> -->
+            <a href="#" class="fab fa-youtube"></a>
+        </div>
+    </div>
+
+<div class="box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHZs8JAdxOTMEuIWKRqe181IuWk0mJNDnWj9xl19zcmUEGJcjICRgkzLWaADwERqzN6SBT08Crw98&usqp=CAU&ec=48665698">
+    <h3>georh Daniel</h3>
+    <span>expert doctor</span>
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <!-- <a href="#" class="fab fa-linkedin"></a> -->
+        <a href="#" class="fab fa-youtube"></a>
+    </div>
+</div>
+
+<div class="box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZc8-ORSWXtSBdCzDYhZTLQn55ZP6rH6EDnhwRxPU11A&usqp=CAU&ec=48665698">
+    <h3>Charles vijay</h3>
+    <span>expert doctor</span>
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <!-- <a href="#" class="fab fa-linkedln"></a> -->
+        <a href="#" class="fab fa-youtube"></a>
+    </div>
+</div>
+
+<div class="box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT69CXDaRtkDkXQaQoA4EeKMzANYMLdVxQSaCMs4W-cgUIh7-wlpfic4u7c6FLo_gEp_jobc3GiDQM&usqp=CAU&ec=48665698">
+    <h3> Stephen  Jeffrey</h3>
+    <span>expert doctor</span>
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <!-- <a href="#" class="fab fa-linkedln"></a> -->
+        <a href="#" class="fab fa-youtube"></a>
+    </div>
+</div>
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXcPwJB46LAZKIpS6lAa1g9yQ7_x-ykRODrz_XSAioDkWhL950blqCYbOhdeU2A4zsl1b5TFLpa5Y&usqp=CAU&ec=48665698">
+        <h3>mark jeo</h3>
+        <span>expert doctor</span>
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <!-- <a href="#" class="fab fa-linkedln"></a> -->
+            <a href="#" class="fab fa-youtube"></a>
+        </div>
+</div>
+<div class="box">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLWex476BXqbv-pK9aVSiP3etJFvAdMO1K2wxT6aHowUJ_hOSC5JYpFmFb1W0Bx9NPc6rsr-u8gQ8&usqp=CAU&ec=48665698">
+    <h3>staffy calino </h3>
+    <span>expert doctor</span>
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <!-- <a href="#" class="fab fa-linkedln"></a> -->
+        <a href="#" class="fab fa-youtube"></a>
+    </div>
+</div>
+</div>
+
+</section>
+
+<!-- doctors section ends  -->
+
+<!-- booking section starts  -->
+
+<section class="book" id="book">
+
+<h1 class="heading"><span>book</span>now</h1>
+
+<div class="row">
+
+<div class="image">
+    <img src="https://media.istockphoto.com/id/1356660353/vector/female-audiologist-doctor-checks-boy-ears-with-otoscope-hearing-exam-for-kids.jpg?s=612x612&w=0&k=20&c=BAZiBBH2KjGrymzRDuFaAc4bQCngs8TFTwQ35v5HsqM=" alt="">
+</div>
+<form action="">
+    <h3> Book Appointment</h3>
+    <p>HORAN & FEVOLD HEARING HOSPITAL</p>
+    <input type="text" placeholder="your name" class="box">
+    <input type="number" placeholder="your Mobile Number" class="box">
+    <input type="email" placeholder="your email" class="box">
+    <input type="date" class="box">
+    <input type="submit" value="book now" class="btn">
+</form>
+</div>
+
+
+</section>
+
+
+
+<!-- booking section ends -->
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+<h1 class="heading">Client's <span>review</span></h1>
+<div class="box-container">
+    <div class="box">
+        <img src="https://pps.whatsapp.net/v/t61.24694-24/352358903_2185559548307532_8123204861962566121_n.jpg?ccb=11-4&oh=01_AdSo7fZOC3jUz_ONwrHquU5lad-AijxXg9ppLLdso9ulHg&oe=6496E491" alt="" width="100px">
+        <h3>Basavaraj</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text">It was a comfortable stay. The staff was very concerned and helpful. Overall a great experience. Keep up the good work.</p>
+    </div>
+
+    <div class="box">
+        <img src="https://pps.whatsapp.net/v/t61.24694-24/353716540_1344660372795809_5774149527172949867_n.jpg?ccb=11-4&oh=01_AdT0PJHjjIqdNjAiLjGKHHcamA85aXt04ogoBF7LU9A-LA&oe=6496CD98" alt="" width="100px">
+        <h3>vijaylaxmi</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text">Recently visited health check up department of Horan & feovled Hospital for a hearing check up.</p>
+    </div>
+
+    <div class="box">
+        <img src="https://pps.whatsapp.net/v/t61.24694-24/352880517_628002982726492_5422228490944494856_n.jpg?ccb=11-4&oh=01_AdSaf4f1CgGtmt4LWaajei-oag_OyV_1H1qKzd_2T1UN0w&oe=6496FBD7" alt="" width="100px">
+        <h3>Aishwarya</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text">Recently i have visited the horan & fevold clinic for check ,the environment and staff support was beeter</p>
+    </div>
+    
+
+   
+    <div class="box">
+        <img src="https://pps.whatsapp.net/v/t61.24694-24/353193979_168393136212331_6067545325153589910_n.jpg?ccb=11-4&oh=01_AdTG1_U6qS7wBOxY3f-8iyAQpH9ehpXhLMwLQ2LyUcBRgA&oe=6496E636" alt="" width="100px">
+        <h3>Manjunath</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text"> the Hospital location was too near to metro station which is very helpful for people </p>
+    </div>
+    <div class="box">
+        <img src="https://pps.whatsapp.net/v/t61.24694-24/353645220_219036781076313_1751460022473994646_n.jpg?ccb=11-4&oh=01_AdTKr_QgvrP3MV4dOxfqThwUpJcWDTHhNU0WgljLGcjGxA&oe=6496D6C0" alt="" width="100px">
+        <h3>Arun kumar</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </div>
+        <p class="text">i would like to thank Mr.Basvaraj for all support , and the Hospitalenvironment is quite good</p>
+    </div>
+
+    
+    
+</div>
+
+</section>
+
+<!-- review section ends -->
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>Quick links</h3>
+            <a href="#"><i class="fas fa-chevron-right"></i>home</a>
+            <a href="#"><i class="fas fa-chevron-right"></i>services</a>
+            <a href="#"><i class="fas fa-chevron-right"></i>About us</a>
+            <a href="#"><i class="fas fa-chevron-right"></i>Doctors</a>
+            <a href="#"><i class="fas fa-chevron-right"></i>book</a>
+            <a href="#"><i class="fas fa-chevron-right"></i>Review</a>
+    </div>
+
+   <div class="box">
+    <h3>OUR services</h3>
+    <a href="#"><i class="fas fa-chevron-right"></i>Hearing</a>
+    <a href="#"><i class="fas fa-chevron-right"></i>message therapy</a>
+    <a href="#"><i class="fas fa-chevron-right"></i>dental care</a>
+    <a href="#"><i class="fas fa-chevron-right"></i>diagnosis</a>
+    <a href="#"><i class="fas fa-chevron-right"></i>caridology</a>
+    <a href="#"><i class="fas fa-chevron-right"></i>ambulance service</a>
+</div>
+
+<div class="box">
+    <h3>contact info</h3>
+    <a href="#"><i class="fas fa-phone">(970) 730-2872</i></a>
+    <a href="#"><i class="fas fa-phone">(509) 764-8642</i></a>
+    <a href="#"><i class="fas fa-envelope">keira@thelewisagencyllc.com</i></a>
+    <a href="#"><i class="fas fa-envelope">info@horanfevoldhearing.com</i></a>
+
+
+    <div class="cox"><h3>Locations </h3>
+
+    <a href="#"><i class="fas fa-map-market-alt"><h4>Moses Lake Clinic</h4>
+        <h6>423 W Third Ave, Suite A Moses Lake, WA </h6></i></a> </div>
+       <div> <a href="#"><i class="fas fa-map-market-alt"><h4>Wenatchee Clinic</h4>
+            <h6><p>610 N. Mission Street, Suite 120
+            Wenatchee, WA 98801
+            509-665-3100
+            Hours:
+            Monday through Friday
+            8:30 AM to 4:30 PM</p></h6></i></a></div>
+</div>
+
+
+<div class="box">
+    <h3>follow us</h3>
+    <a href="https://www.facebook.com/HoranFevoldHearing/"> <i class="fab fa-facebook-f"></i> facebook </a>
+    <a href="https://www.instagram.com/horanfevoldhearing/"> <i class="fab fa-instagram" ></i>instagram </a>
+    <a href="https://www.youtube.com/user/HoranFevoldHearing"> <i class="fab fa-youtube"></i> youtube </a>
+</div>
+    </div>
+    <a href="#" class="logo"><img src="data:image/jpeg;base64,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" alt="" width="300px"> </a>
+<div class="credit">created by <span>Mr.Basavaraj Kembavi</span> <p>copyright &copy; 2023 HORAN & FEVOLD HEARING HOSPITAL | all rights reserved.</p</div>
+</section>
+
+
+
+
+<!-- footer section ends -->
+    <!-- custom js filr link  -->
+    <script src="./script.js"></script>
+</body>
+</html>
